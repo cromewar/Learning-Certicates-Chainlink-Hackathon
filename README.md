@@ -28,3 +28,8 @@ This project takes the concept of an NTT (Non-tradeable token), focused on deliv
 6. Run some test:
 
 `brownie test`
+
+
+Disclaimer:
+
+This is just a showcase for the NTT implementation, and the current version is ALpha 0.2
