@@ -1,0 +1,366 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Revoked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "hasValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "signature",
+          "type": "bytes"
+        }
+      ],
+      "name": "pull",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IERC4671Pull.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        250
+      ],
+      "IERC4671": [
+        51
+      ],
+      "IERC4671Pull": [
+        199
+      ]
+    },
+    "id": 200,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 185,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:6"
+      },
+      {
+        "absolutePath": "interfaces/IERC4671.sol",
+        "file": "./IERC4671.sol",
+        "id": 186,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 200,
+        "sourceUnit": 52,
+        "src": "58:24:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 187,
+              "name": "IERC4671",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 51,
+              "src": "110:8:6"
+            },
+            "id": 188,
+            "nodeType": "InheritanceSpecifier",
+            "src": "110:8:6"
+          }
+        ],
+        "canonicalName": "IERC4671Pull",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 199,
+        "linearizedBaseContracts": [
+          199,
+          51,
+          250
+        ],
+        "name": "IERC4671Pull",
+        "nameLocation": "94:12:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 189,
+              "nodeType": "StructuredDocumentation",
+              "src": "125:266:6",
+              "text": "@notice Pull a token from the owner wallet to the caller's wallet\n @param tokenId Identifier of the token to transfer\n @param owner Address that owns tokenId\n @param signature Signed data (tokenId, owner, recipient) by the owner of the token"
+            },
+            "functionSelector": "d992ad74",
+            "id": 198,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pull",
+            "nameLocation": "405:4:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 191,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "427:7:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 198,
+                  "src": "419:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 190,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "419:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 193,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "452:5:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 198,
+                  "src": "444:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 192,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "444:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 195,
+                  "mutability": "mutable",
+                  "name": "signature",
+                  "nameLocation": "480:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 198,
+                  "src": "467:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 194,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "409:86:6"
+            },
+            "returnParameters": {
+              "id": 197,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "504:0:6"
+            },
+            "scope": 199,
+            "src": "396:109:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 200,
+        "src": "84:423:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:475:6"
+  },
+  "contractName": "IERC4671Pull",
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/IERC165",
+    "IERC4671"
+  ],
+  "offset": [
+    84,
+    507
+  ],
+  "sha1": "584348ad489db7bb667445ad33eaef21bcc7d534",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./IERC4671.sol\";\n\ninterface IERC4671Pull is IERC4671 {\n    /// @notice Pull a token from the owner wallet to the caller's wallet\n    /// @param tokenId Identifier of the token to transfer\n    /// @param owner Address that owns tokenId\n    /// @param signature Signed data (tokenId, owner, recipient) by the owner of the token\n    function pull(\n        uint256 tokenId,\n        address owner,\n        bytes memory signature\n    ) external;\n}\n",
+  "type": "interface"
+}

@@ -1,0 +1,460 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Revoked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "approveMint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveRevoke",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "hasValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "voters",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IERC4671Consensus.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        250
+      ],
+      "IERC4671": [
+        51
+      ],
+      "IERC4671Consensus": [
+        76
+      ]
+    },
+    "id": 77,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 53,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:2"
+      },
+      {
+        "absolutePath": "interfaces/IERC4671.sol",
+        "file": "./IERC4671.sol",
+        "id": 54,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 77,
+        "sourceUnit": 52,
+        "src": "58:24:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 55,
+              "name": "IERC4671",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 51,
+              "src": "115:8:2"
+            },
+            "id": 56,
+            "nodeType": "InheritanceSpecifier",
+            "src": "115:8:2"
+          }
+        ],
+        "canonicalName": "IERC4671Consensus",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 76,
+        "linearizedBaseContracts": [
+          76,
+          51,
+          250
+        ],
+        "name": "IERC4671Consensus",
+        "nameLocation": "94:17:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 57,
+              "nodeType": "StructuredDocumentation",
+              "src": "130:100:2",
+              "text": "@notice Get voters addresses for this consensus contract\n @return Addresses of the voters"
+            },
+            "functionSelector": "350580ea",
+            "id": 63,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "voters",
+            "nameLocation": "244:6:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:2:2"
+            },
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 61,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 63,
+                  "src": "276:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 59,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "276:7:2",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 60,
+                    "nodeType": "ArrayTypeName",
+                    "src": "276:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "275:18:2"
+            },
+            "scope": 76,
+            "src": "235:59:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 64,
+              "nodeType": "StructuredDocumentation",
+              "src": "300:118:2",
+              "text": "@notice Cast a vote to mint a token for a specific address\n @param owner Address for whom to mint the token"
+            },
+            "functionSelector": "0e801ee1",
+            "id": 69,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveMint",
+            "nameLocation": "432:11:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "452:5:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 69,
+                  "src": "444:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "444:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "443:15:2"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "467:0:2"
+            },
+            "scope": 76,
+            "src": "423:45:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 70,
+              "nodeType": "StructuredDocumentation",
+              "src": "474:107:2",
+              "text": "@notice Cast a vote to revoke a specific token\n @param tokenId Identifier of the token to revoke"
+            },
+            "functionSelector": "df97f56f",
+            "id": 75,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveRevoke",
+            "nameLocation": "595:13:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "617:7:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 75,
+                  "src": "609:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 71,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "609:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:17:2"
+            },
+            "returnParameters": {
+              "id": 74,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "634:0:2"
+            },
+            "scope": 76,
+            "src": "586:49:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 77,
+        "src": "84:553:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:605:2"
+  },
+  "contractName": "IERC4671Consensus",
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/IERC165",
+    "IERC4671"
+  ],
+  "offset": [
+    84,
+    637
+  ],
+  "sha1": "641563673662622efcc9dfdab339e64d12d59f06",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./IERC4671.sol\";\n\ninterface IERC4671Consensus is IERC4671 {\n    /// @notice Get voters addresses for this consensus contract\n    /// @return Addresses of the voters\n    function voters() external view returns (address[] memory);\n\n    /// @notice Cast a vote to mint a token for a specific address\n    /// @param owner Address for whom to mint the token\n    function approveMint(address owner) external;\n\n    /// @notice Cast a vote to revoke a specific token\n    /// @param tokenId Identifier of the token to revoke\n    function approveRevoke(uint256 tokenId) external;\n}\n",
+  "type": "interface"
+}

@@ -1,0 +1,561 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "Added",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "Removed",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IERC4671Store.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        250
+      ],
+      "IERC4671Store": [
+        238
+      ]
+    },
+    "id": 239,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 201,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:7"
+      },
+      {
+        "absolutePath": "/home/cromewar/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.5.0/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "id": 202,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 239,
+        "sourceUnit": 251,
+        "src": "58:65:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 203,
+              "name": "IERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 250,
+              "src": "152:7:7"
+            },
+            "id": 204,
+            "nodeType": "InheritanceSpecifier",
+            "src": "152:7:7"
+          }
+        ],
+        "canonicalName": "IERC4671Store",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 238,
+        "linearizedBaseContracts": [
+          238,
+          250
+        ],
+        "name": "IERC4671Store",
+        "nameLocation": "135:13:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 210,
+            "name": "Added",
+            "nameLocation": "260:5:7",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 209,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 206,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "274:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "266:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 205,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 208,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "289:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "281:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 207,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "281:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "265:30:7"
+            },
+            "src": "254:42:7"
+          },
+          {
+            "anonymous": false,
+            "id": 216,
+            "name": "Removed",
+            "nameLocation": "400:7:7",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 212,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "416:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 216,
+                  "src": "408:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 211,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 214,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "431:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 216,
+                  "src": "423:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 213,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:30:7"
+            },
+            "src": "394:44:7"
+          },
+          {
+            "documentation": {
+              "id": 217,
+              "nodeType": "StructuredDocumentation",
+              "src": "444:147:7",
+              "text": "@notice Add a IERC4671Enumerable contract address to the caller's record\n @param token Address of the IERC4671Enumerable contract to add"
+            },
+            "functionSelector": "0a3b0a4f",
+            "id": 222,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nameLocation": "605:3:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 220,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 219,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "617:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 222,
+                  "src": "609:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 218,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "609:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:15:7"
+            },
+            "returnParameters": {
+              "id": 221,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "632:0:7"
+            },
+            "scope": 238,
+            "src": "596:37:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 223,
+              "nodeType": "StructuredDocumentation",
+              "src": "639:147:7",
+              "text": "@notice Remove a IERC4671Enumerable contract from the caller's record\n @param token Address of the IERC4671Enumerable contract to remove"
+            },
+            "functionSelector": "29092d0e",
+            "id": 228,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nameLocation": "800:6:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 226,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 225,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "815:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 228,
+                  "src": "807:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "807:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "806:15:7"
+            },
+            "returnParameters": {
+              "id": 227,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "830:0:7"
+            },
+            "scope": 238,
+            "src": "791:40:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 229,
+              "nodeType": "StructuredDocumentation",
+              "src": "837:154:7",
+              "text": "@notice Get all the IERC4671Enumerable contracts for a given owner\n @param owner Address for which to retrieve the IERC4671Enumerable contracts"
+            },
+            "functionSelector": "c2bc2efc",
+            "id": 237,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nameLocation": "1005:3:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 232,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 231,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1017:5:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 237,
+                  "src": "1009:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 230,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1009:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1008:15:7"
+            },
+            "returnParameters": {
+              "id": 236,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 235,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 237,
+                  "src": "1047:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 233,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1047:7:7",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 234,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1047:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1046:18:7"
+            },
+            "scope": 238,
+            "src": "996:69:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 239,
+        "src": "125:942:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1035:7"
+  },
+  "contractName": "IERC4671Store",
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/IERC165"
+  ],
+  "offset": [
+    125,
+    1067
+  ],
+  "sha1": "bb5a78578aa3476579e99911fcbf37f324146b7f",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"@openzeppelin/contracts/utils/introspection/IERC165.sol\";\n\ninterface IERC4671Store is IERC165 {\n    // Event emitted when a IERC4671Enumerable contract is added to the owner's records\n    event Added(address owner, address token);\n\n    // Event emitted when a IERC4671Enumerable contract is removed from the owner's records\n    event Removed(address owner, address token);\n\n    /// @notice Add a IERC4671Enumerable contract address to the caller's record\n    /// @param token Address of the IERC4671Enumerable contract to add\n    function add(address token) external;\n\n    /// @notice Remove a IERC4671Enumerable contract from the caller's record\n    /// @param token Address of the IERC4671Enumerable contract to remove\n    function remove(address token) external;\n\n    /// @notice Get all the IERC4671Enumerable contracts for a given owner\n    /// @param owner Address for which to retrieve the IERC4671Enumerable contracts\n    function get(address owner) external view returns (address[] memory);\n}\n",
+  "type": "interface"
+}

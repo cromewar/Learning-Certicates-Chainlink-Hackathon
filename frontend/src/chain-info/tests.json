@@ -1,0 +1,19 @@
+{
+  "contracts": {
+    "Certificates": "ddfd09247548dd4ab910fafffacaf3eabf1bf839",
+    "ERC4671Consensus": "82b1c10e543cd89cd5cd324d128e6d5050212f67",
+    "ERC4671Store": "534f2d07d9a164ba052b82b9bec879268197f696",
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/ECDSA": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/Strings": "1ce946f6a4eaa185320328620ccf999b9e86db7c"
+  },
+  "tests": {
+    "tests/unit/test_certificate.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": ".",
+      "sha1": "ab550a838fc3bb7b68e58db95615cf01c40b0911",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}

@@ -1,0 +1,729 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Revoked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "delegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "operators",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "owners",
+          "type": "address[]"
+        }
+      ],
+      "name": "delegateBatch",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "hasValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "issuerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "owners",
+          "type": "address[]"
+        }
+      ],
+      "name": "mintBatch",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IERC4671Delegate.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        250
+      ],
+      "IERC4671": [
+        51
+      ],
+      "IERC4671Delegate": [
+        121
+      ]
+    },
+    "id": 122,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 78,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:3"
+      },
+      {
+        "absolutePath": "interfaces/IERC4671.sol",
+        "file": "./IERC4671.sol",
+        "id": 79,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 122,
+        "sourceUnit": 52,
+        "src": "58:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 80,
+              "name": "IERC4671",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 51,
+              "src": "114:8:3"
+            },
+            "id": 81,
+            "nodeType": "InheritanceSpecifier",
+            "src": "114:8:3"
+          }
+        ],
+        "canonicalName": "IERC4671Delegate",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 121,
+        "linearizedBaseContracts": [
+          121,
+          51,
+          250
+        ],
+        "name": "IERC4671Delegate",
+        "nameLocation": "94:16:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 82,
+              "nodeType": "StructuredDocumentation",
+              "src": "129:268:3",
+              "text": "@notice Grant one-time minting right to `operator` for `owner`\n An allowed operator can call the function to transfer rights.\n @param operator Address allowed to mint a token\n @param owner Address for whom `operator` is allowed to mint a token"
+            },
+            "functionSelector": "8ab65686",
+            "id": 89,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegate",
+            "nameLocation": "411:8:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 87,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 84,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nameLocation": "428:8:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "420:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "420:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 86,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "446:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "438:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 85,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "438:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "419:33:3"
+            },
+            "returnParameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "461:0:3"
+            },
+            "scope": 121,
+            "src": "402:60:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 90,
+              "nodeType": "StructuredDocumentation",
+              "src": "468:304:3",
+              "text": "@notice Grant one-time minting right to a list of `operators` for a corresponding list of `owners`\n An allowed operator can call the function to transfer rights.\n @param operators Addresses allowed to mint\n @param owners Addresses for whom `operators` are allowed to mint a token"
+            },
+            "functionSelector": "4214f1f2",
+            "id": 99,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "delegateBatch",
+            "nameLocation": "786:13:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 93,
+                  "mutability": "mutable",
+                  "name": "operators",
+                  "nameLocation": "817:9:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "800:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 91,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "800:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 92,
+                    "nodeType": "ArrayTypeName",
+                    "src": "800:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 96,
+                  "mutability": "mutable",
+                  "name": "owners",
+                  "nameLocation": "845:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 99,
+                  "src": "828:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 94,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "828:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 95,
+                    "nodeType": "ArrayTypeName",
+                    "src": "828:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "799:53:3"
+            },
+            "returnParameters": {
+              "id": 98,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "869:0:3"
+            },
+            "scope": 121,
+            "src": "777:93:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 100,
+              "nodeType": "StructuredDocumentation",
+              "src": "876:133:3",
+              "text": "@notice Mint a token. Caller must have the right to mint for the owner.\n @param owner Address for whom the token is minted"
+            },
+            "functionSelector": "6a627842",
+            "id": 105,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "1023:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 102,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1036:5:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 105,
+                  "src": "1028:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1028:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1027:15:3"
+            },
+            "returnParameters": {
+              "id": 104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1051:0:3"
+            },
+            "scope": 121,
+            "src": "1014:38:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 106,
+              "nodeType": "StructuredDocumentation",
+              "src": "1058:160:3",
+              "text": "@notice Mint tokens to multiple addresses. Caller must have the right to mint for all owners.\n @param owners Addresses for whom the tokens are minted"
+            },
+            "functionSelector": "927f59ba",
+            "id": 112,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintBatch",
+            "nameLocation": "1232:9:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 109,
+                  "mutability": "mutable",
+                  "name": "owners",
+                  "nameLocation": "1259:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 112,
+                  "src": "1242:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 107,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1242:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 108,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1242:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1241:25:3"
+            },
+            "returnParameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1275:0:3"
+            },
+            "scope": 121,
+            "src": "1223:53:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 113,
+              "nodeType": "StructuredDocumentation",
+              "src": "1282:129:3",
+              "text": "@notice Get the issuer of a token\n @param tokenId Identifier of the token\n @return Address who minted `tokenId`"
+            },
+            "functionSelector": "a4e2ee11",
+            "id": 120,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "issuerOf",
+            "nameLocation": "1425:8:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 115,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "1442:7:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 120,
+                  "src": "1434:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1434:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1433:17:3"
+            },
+            "returnParameters": {
+              "id": 119,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 118,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 120,
+                  "src": "1474:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 117,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1474:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1473:9:3"
+            },
+            "scope": 121,
+            "src": "1416:67:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 122,
+        "src": "84:1401:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1453:3"
+  },
+  "contractName": "IERC4671Delegate",
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/IERC165",
+    "IERC4671"
+  ],
+  "offset": [
+    84,
+    1485
+  ],
+  "sha1": "9752fbdc2b1aa17775e272b4472ef3477dfc8aed",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./IERC4671.sol\";\n\ninterface IERC4671Delegate is IERC4671 {\n    /// @notice Grant one-time minting right to `operator` for `owner`\n    /// An allowed operator can call the function to transfer rights.\n    /// @param operator Address allowed to mint a token\n    /// @param owner Address for whom `operator` is allowed to mint a token\n    function delegate(address operator, address owner) external;\n\n    /// @notice Grant one-time minting right to a list of `operators` for a corresponding list of `owners`\n    /// An allowed operator can call the function to transfer rights.\n    /// @param operators Addresses allowed to mint\n    /// @param owners Addresses for whom `operators` are allowed to mint a token\n    function delegateBatch(address[] memory operators, address[] memory owners)\n        external;\n\n    /// @notice Mint a token. Caller must have the right to mint for the owner.\n    /// @param owner Address for whom the token is minted\n    function mint(address owner) external;\n\n    /// @notice Mint tokens to multiple addresses. Caller must have the right to mint for all owners.\n    /// @param owners Addresses for whom the tokens are minted\n    function mintBatch(address[] memory owners) external;\n\n    /// @notice Get the issuer of a token\n    /// @param tokenId Identifier of the token\n    /// @return Address who minted `tokenId`\n    function issuerOf(uint256 tokenId) external view returns (address);\n}\n",
+  "type": "interface"
+}

@@ -1,0 +1,624 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Revoked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "emittedCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "hasValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "holdersCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/IERC4671Enumerable.sol",
+    "exportedSymbols": {
+      "IERC165": [
+        250
+      ],
+      "IERC4671": [
+        51
+      ],
+      "IERC4671Enumerable": [
+        157
+      ]
+    },
+    "id": 158,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 123,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:4"
+      },
+      {
+        "absolutePath": "interfaces/IERC4671.sol",
+        "file": "./IERC4671.sol",
+        "id": 124,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 158,
+        "sourceUnit": 52,
+        "src": "58:24:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 125,
+              "name": "IERC4671",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 51,
+              "src": "116:8:4"
+            },
+            "id": 126,
+            "nodeType": "InheritanceSpecifier",
+            "src": "116:8:4"
+          }
+        ],
+        "canonicalName": "IERC4671Enumerable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 157,
+        "linearizedBaseContracts": [
+          157,
+          51,
+          250
+        ],
+        "name": "IERC4671Enumerable",
+        "nameLocation": "94:18:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 127,
+              "nodeType": "StructuredDocumentation",
+              "src": "131:49:4",
+              "text": "@return emittedCount Number of tokens emitted"
+            },
+            "functionSelector": "26019c18",
+            "id": 132,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "emittedCount",
+            "nameLocation": "194:12:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 128,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "206:2:4"
+            },
+            "returnParameters": {
+              "id": 131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 132,
+                  "src": "232:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 129,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "231:9:4"
+            },
+            "scope": 157,
+            "src": "185:56:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 133,
+              "nodeType": "StructuredDocumentation",
+              "src": "247:48:4",
+              "text": "@return holdersCount Number of token holders"
+            },
+            "functionSelector": "6b4ed21b",
+            "id": 138,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "holdersCount",
+            "nameLocation": "309:12:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 134,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "321:2:4"
+            },
+            "returnParameters": {
+              "id": 137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 136,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 138,
+                  "src": "347:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 135,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "346:9:4"
+            },
+            "scope": 157,
+            "src": "300:56:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 139,
+              "nodeType": "StructuredDocumentation",
+              "src": "362:209:4",
+              "text": "@notice Get the tokenId of a token using its position in the owner's list\n @param owner Address for whom to get the token\n @param index Index of the token\n @return tokenId of the token"
+            },
+            "functionSelector": "2f745c59",
+            "id": 148,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenOfOwnerByIndex",
+            "nameLocation": "585:19:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 141,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "613:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "605:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 140,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "605:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 143,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "628:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "620:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "604:30:4"
+            },
+            "returnParameters": {
+              "id": 147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 146,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "682:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 145,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "682:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "681:9:4"
+            },
+            "scope": 157,
+            "src": "576:115:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 149,
+              "nodeType": "StructuredDocumentation",
+              "src": "697:144:4",
+              "text": "@notice Get a tokenId by it's index, where 0 <= index < total()\n @param index Index of the token\n @return tokenId of the token"
+            },
+            "functionSelector": "4f6ccce7",
+            "id": 156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "tokenByIndex",
+            "nameLocation": "855:12:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 151,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "876:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "868:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 150,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "868:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:15:4"
+            },
+            "returnParameters": {
+              "id": 155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 154,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "906:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 153,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "906:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "905:9:4"
+            },
+            "scope": 157,
+            "src": "846:69:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 158,
+        "src": "84:833:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:885:4"
+  },
+  "contractName": "IERC4671Enumerable",
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.5.0/IERC165",
+    "IERC4671"
+  ],
+  "offset": [
+    84,
+    917
+  ],
+  "sha1": "fb0e61a3c10ba07c0f055d0d5315e390e87b4f29",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./IERC4671.sol\";\n\ninterface IERC4671Enumerable is IERC4671 {\n    /// @return emittedCount Number of tokens emitted\n    function emittedCount() external view returns (uint256);\n\n    /// @return holdersCount Number of token holders\n    function holdersCount() external view returns (uint256);\n\n    /// @notice Get the tokenId of a token using its position in the owner's list\n    /// @param owner Address for whom to get the token\n    /// @param index Index of the token\n    /// @return tokenId of the token\n    function tokenOfOwnerByIndex(address owner, uint256 index)\n        external\n        view\n        returns (uint256);\n\n    /// @notice Get a tokenId by it's index, where 0 <= index < total()\n    /// @param index Index of the token\n    /// @return tokenId of the token\n    function tokenByIndex(uint256 index) external view returns (uint256);\n}\n",
+  "type": "interface"
+}
