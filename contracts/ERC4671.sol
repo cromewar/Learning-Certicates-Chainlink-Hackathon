@@ -6,15 +6,10 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 import "../interfaces/IERC4671.sol";
-import "../interfaces/IERC4671Metadata.sol";
+
 import "../interfaces/IERC4671Enumerable.sol";
 
-abstract contract ERC4671 is
-    IERC4671,
-    IERC4671Metadata,
-    IERC4671Enumerable,
-    ERC165
-{
+abstract contract ERC4671 is IERC4671, IERC4671Enumerable, ERC165 {
     // Token data
     struct Token {
         address issuer;
@@ -107,37 +102,6 @@ abstract contract ERC4671 is
         return _numberOfValidTokens[owner] > 0;
     }
 
-    /// @return Descriptive name of the tokens in this contract
-    function name() public view virtual override returns (string memory) {
-        return _name;
-    }
-
-    /// @return An abbreviated name of the tokens in this contract
-    function symbol() public view virtual override returns (string memory) {
-        return _symbol;
-    }
-
-    /// @notice URI to query to get the token's metadata
-    /// @param tokenId Identifier of the token
-    /// @return URI for the token
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (string memory)
-    {
-        _getTokenOrRevert(tokenId);
-        bytes memory baseURI = bytes(_baseURI());
-        if (baseURI.length > 0) {
-            return
-                string(
-                    abi.encodePacked(baseURI, Strings.toHexString(tokenId, 32))
-                );
-        }
-        return "";
-    }
-
     /// @return emittedCount Number of tokens emitted
     function emittedCount() public view override returns (uint256) {
         return _emittedCount;
@@ -186,7 +150,6 @@ abstract contract ERC4671 is
     {
         return
             interfaceId == type(IERC4671).interfaceId ||
-            interfaceId == type(IERC4671Metadata).interfaceId ||
             interfaceId == type(IERC4671Enumerable).interfaceId ||
             super.supportsInterface(interfaceId);
     }
@@ -291,5 +254,9 @@ abstract contract ERC4671 is
             array[index] = array[array.length - 1];
         }
         array.pop();
+    }
+
+    function _exists(uint256 tokenId) internal view virtual returns (bool) {
+        return _tokens[tokenId].owner != address(0);
     }
 }

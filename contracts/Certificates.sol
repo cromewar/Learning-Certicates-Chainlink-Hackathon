@@ -3,8 +3,9 @@
 pragma solidity ^0.8.0;
 
 import "./ERC4671.sol";
+import "./ERC4671URIStorage.sol";
 
-contract Certificates is ERC4671 {
+contract Certificates is ERC4671URIStorage {
     mapping(address => uint256) public OwnerToId;
 
     string internal ipfsHash;
@@ -18,42 +19,17 @@ contract Certificates is ERC4671 {
 
     // This function creates a new Certificate and relates the owner
     // address which the corresponding id
+    // Also uses the setTokenURI to set up the IPFS token URI to the ERC-4671
 
-    function createCertificate(address owner) public {
+    function createCertificate(address owner, string memory _tokenUri) public {
         require(_isCreator(), "You must be the contract creator");
         _mint(owner);
         OwnerToId[owner] = emittedCount();
+        _setTokenURI(OwnerToId[owner], _tokenUri);
         emit newCertificateCreated(owner, OwnerToId[owner]);
     }
 
     function _baseURI() internal pure override returns (string memory) {
         return "https://ipfs.io/ipfs/";
-    }
-
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        virtual
-        override
-        returns (string memory)
-    {
-        _getTokenOrRevert(tokenId);
-        bytes memory baseURI = bytes(_baseURI());
-        if (baseURI.length > 0) {
-            return
-                string(
-                    abi.encodePacked(
-                        baseURI,
-                        ipfsHash,
-                        Strings.toString(tokenId),
-                        ".json"
-                    )
-                );
-        }
-        return "";
-    }
-
-    function setTokenUri(string memory _ipfsCode) public {
-        ipfsHash = _ipfsCode;
     }
 }

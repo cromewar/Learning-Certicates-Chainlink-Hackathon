@@ -8,7 +8,7 @@ def deploy_certificate():
     tx = certificate.createCertificate(get_account(index=0))
     tx.wait(1)
     certificate.setTokenUri("Qmd9MCGtdVz2miNumBHDbvj8bigSgTwnr4SbyH6DNnpWdt?filename=")
-    token_uri = certificate.tokenURI(0, {"from:": account})
+    token_uri = certificate.tokenURI(0)
     print(f"the token Uri is {token_uri}")
 
 
