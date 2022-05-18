@@ -298,4 +298,12 @@ abstract contract ERC4671 is
     function _exists(uint256 tokenId) internal view virtual returns (bool) {
         return _tokens[tokenId].owner != address(0);
     }
+
+    function getOwnerBasedOnIndex(uint256 tokenId)
+        public
+        view
+        returns (address)
+    {
+        return _tokens[tokenId].owner;
+    }
 }

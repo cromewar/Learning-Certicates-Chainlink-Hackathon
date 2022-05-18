@@ -56,7 +56,7 @@ abstract contract ERC4671URIStorage is ERC4671 {
     {
         require(
             _exists(tokenId),
-            "ERC721URIStorage: URI set of nonexistent token"
+            "ERC4671URIStorage: URI set of nonexistent token"
         );
         _tokenURIs[tokenId] = _tokenURI;
     }

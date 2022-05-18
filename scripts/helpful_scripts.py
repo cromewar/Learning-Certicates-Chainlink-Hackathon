@@ -1,7 +1,7 @@
 from brownie import network, accounts, config
 
 
-LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "miannet-fork-dev"]
+LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "mainnet-fork-dev"]
 
 
 def get_account(index=None, id=None):
