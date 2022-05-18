@@ -4,12 +4,21 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 import "../interfaces/IERC4671.sol";
-
+import "../interfaces/IERC4671Metadata.sol";
 import "../interfaces/IERC4671Enumerable.sol";
 
-abstract contract ERC4671 is IERC4671, IERC4671Enumerable, ERC165 {
+abstract contract ERC4671 is
+    IERC4671,
+    IERC4671Metadata,
+    IERC4671Enumerable,
+    ERC165
+{
+    // String for uint
+    using Strings for uint256;
+
     // Token data
     struct Token {
         address issuer;
@@ -102,6 +111,35 @@ abstract contract ERC4671 is IERC4671, IERC4671Enumerable, ERC165 {
         return _numberOfValidTokens[owner] > 0;
     }
 
+    /// @return Descriptive name of the tokens in this contract
+    function name() public view virtual override returns (string memory) {
+        return _name;
+    }
+
+    /// @return An abbreviated name of the tokens in this contract
+    function symbol() public view virtual override returns (string memory) {
+        return _symbol;
+    }
+
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        virtual
+        override
+        returns (string memory)
+    {
+        require(
+            _exists(tokenId),
+            "ERC4671Metadata: URI query for nonexistent token"
+        );
+
+        string memory baseURI = _baseURI();
+        return
+            bytes(baseURI).length > 0
+                ? string(abi.encodePacked(baseURI, tokenId.toString()))
+                : "";
+    }
+
     /// @return emittedCount Number of tokens emitted
     function emittedCount() public view override returns (uint256) {
         return _emittedCount;
@@ -150,6 +188,7 @@ abstract contract ERC4671 is IERC4671, IERC4671Enumerable, ERC165 {
     {
         return
             interfaceId == type(IERC4671).interfaceId ||
+            interfaceId == type(IERC4671Metadata).interfaceId ||
             interfaceId == type(IERC4671Enumerable).interfaceId ||
             super.supportsInterface(interfaceId);
     }
