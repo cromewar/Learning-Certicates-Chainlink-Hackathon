@@ -1,4 +1,4 @@
-from brownie import Certificates, network
+from brownie import Course, network
 from metadata.sample_metadata import metadata_template
 from pathlib import Path
 import requests
@@ -6,7 +6,7 @@ import json
 
 
 def main():
-    certificate = Certificates[-1]
+    certificate = Course[-1]
     number_of_certificates = certificate.emittedCount()
     print(f"your have {number_of_certificates} on this Factory")
     for token_id in range(number_of_certificates):

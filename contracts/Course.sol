@@ -56,8 +56,4 @@ contract Course is ERC4671URIStorage {
             OwnerToId[_ownerOfCertificate]
         );
     }
-
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://ipfs.io/ipfs/";
-    }
 }

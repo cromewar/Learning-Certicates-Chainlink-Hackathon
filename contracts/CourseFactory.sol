@@ -35,4 +35,16 @@ contract CourseFactory {
     function getCourseItem(uint256 _index) public view returns (address) {
         return address(courses[_index]);
     }
+
+    function createCertificateAndSetTokenURI(
+        string memory _tokenURI,
+        address _adressContract,
+        address _ownerOfCertificate
+    ) public {
+        Course myNewCourse = Course(_adressContract);
+        myNewCourse.createCertificateAndSetToken(
+            _ownerOfCertificate,
+            _tokenURI
+        );
+    }
 }
