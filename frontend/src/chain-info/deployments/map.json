@@ -1,7 +1,18 @@
 {
   "4": {
-    "Certificates": [
-      "0x680D3319eD3cA4D4a1750EbA179b82baBED9a53c"
+    "Course": [
+      "0x399F01d4d8d956D807425199146D9e5948b7a3CC"
+    ],
+    "CourseFactory": [
+      "0x3994822250ecc2d5c6B134eACac5a287e1E7648C"
+    ]
+  },
+  "800001": {
+    "Course": [
+      "0xfAeF174Aa6900B41b1D6802bE0a19124cAC769CC"
+    ],
+    "CourseFactory": [
+      "0xc8eC8fFdd268B3C34EBe7aef3aF0fD378b293d57"
     ]
   }
 }

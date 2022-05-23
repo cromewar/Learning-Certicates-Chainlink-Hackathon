@@ -70,4 +70,6 @@ contract ERC4671Store is IERC4671Store, ERC165 {
         require(index > 0 || _records[owner].length > 0, "Address not found");
         return index;
     }
+
+   
 }
