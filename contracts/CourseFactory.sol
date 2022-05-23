@@ -21,7 +21,7 @@ contract CourseFactory {
         string memory _image,
         string memory _description
     ) public {
-        Course newCourse = new Course(_name, _symbol);
+        Course newCourse = new Course(_name, _symbol, msg.sender);
         courses.push(newCourse);
         emit newCourseCreated(
             msg.sender,
