@@ -47,7 +47,7 @@ contract Course is ERC4671URIStorage {
         address _owner,
         string memory _tokenURI
     ) public {
-        require(_isCreator(), "You must be the contract creator");
+        require(owner == msg.sender, "You must be the contract owner");
         _mint(_owner);
         OwnerToId[_owner] = emittedCount();
         _setTokenURI(OwnerToId[_owner], _tokenURI);
