@@ -44,14 +44,17 @@ contract Course is ERC4671URIStorage {
     }
 
     function createCertificateAndSetToken(
-        address _owner,
+        address _ownerOfCertificate,
         string memory _tokenURI
     ) public {
         require(owner == msg.sender, "You must be the contract owner");
-        _mint(_owner);
-        OwnerToId[_owner] = emittedCount();
-        _setTokenURI(OwnerToId[_owner], _tokenURI);
-        emit newCertificateCreated(_owner, OwnerToId[_owner]);
+        _mint(_ownerOfCertificate);
+        OwnerToId[_ownerOfCertificate] = emittedCount() - 1;
+        _setTokenURI(OwnerToId[_ownerOfCertificate], _tokenURI);
+        emit newCertificateCreated(
+            _ownerOfCertificate,
+            OwnerToId[_ownerOfCertificate]
+        );
     }
 
     function _baseURI() internal pure override returns (string memory) {
