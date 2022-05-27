@@ -1,5 +1,5 @@
 from brownie import Course, Contract, accounts, CourseFactory
-from scripts.helpful_scripts import get_account
+from scripts.helpful_scripts import get_account, fund_with_link
 
 
 def main():
@@ -7,8 +7,10 @@ def main():
 
     course = Course[-1]
     certificate = Contract.from_abi(
-        "Course", "0xE709f34Ed71b6B4c96F5FB7eBc9734b02235d84E", course.abi
+        "Course", "0x9CB410f9fB6eE3aAc69f6a90A3a7Df12068C67e7", course.abi
     )
+    tx = fund_with_link(certificate.address)
+    tx.wait(1)
     certificate.createCertificate(account.address, {"from": account})
 
 

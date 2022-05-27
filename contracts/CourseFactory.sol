@@ -7,6 +7,23 @@ import "./Course.sol";
 contract CourseFactory {
     Course[] public courses;
 
+    address vrfCoordinator;
+    address linkToken;
+    uint256 fee;
+    bytes32 keyhash;
+
+    constructor(
+        address _vrfCoordinator,
+        address _linkToken,
+        uint256 _fee,
+        bytes32 _keyhash
+    ) {
+        vrfCoordinator = _vrfCoordinator;
+        linkToken = _linkToken;
+        fee = _fee;
+        keyhash = _keyhash;
+    }
+
     event newCourseCreated(
         address indexed owner,
         address indexed contractAddress,
@@ -21,7 +38,15 @@ contract CourseFactory {
         string memory _image,
         string memory _description
     ) public {
-        Course newCourse = new Course(_name, _symbol, msg.sender);
+        Course newCourse = new Course(
+            _name,
+            _symbol,
+            msg.sender,
+            vrfCoordinator,
+            linkToken,
+            fee,
+            keyhash
+        );
         courses.push(newCourse);
         emit newCourseCreated(
             msg.sender,
@@ -34,17 +59,5 @@ contract CourseFactory {
 
     function getCourseItem(uint256 _index) public view returns (address) {
         return address(courses[_index]);
-    }
-
-    function createCertificateAndSetTokenURI(
-        string memory _tokenURI,
-        address _adressContract,
-        address _ownerOfCertificate
-    ) public {
-        Course myNewCourse = Course(_adressContract);
-        myNewCourse.createCertificateAndSetToken(
-            _ownerOfCertificate,
-            _tokenURI
-        );
     }
 }
