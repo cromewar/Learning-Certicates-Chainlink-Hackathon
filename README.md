@@ -1,6 +1,15 @@
-# Certificate Projects Alpha 1
+# Certificate Projects - Smart Contracts
+
+The frontend-repo is here: https://github.com/leopacheco18/hackathon-frontend
 
 This project takes the concept of an NTT (Non-tradeable token), focused on delivering certificates of completion for Courses, University degrees.
+This allows to prevent falsification and ensures persistance of the certificates on the long time, also each certificate gets asigned a random number to ensure uniquness trough Chainlink VRF.
+
+
+
+## Live Demo of the Project
+
+https://floral-sky-4836.on.fleek.co/
 
 ### Steps to Run
 
