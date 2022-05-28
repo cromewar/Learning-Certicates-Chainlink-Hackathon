@@ -1,4 +1,4 @@
-# Certificate Projects - Smart Contracts
+# CertDeFi Projects - Smart Contracts
 
 The frontend-repo is here: https://github.com/leopacheco18/hackathon-frontend
 
