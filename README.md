@@ -38,7 +38,3 @@ https://floral-sky-4836.on.fleek.co/
 
 `brownie test`
 
-
-Disclaimer:
-
-This is just a showcase for the NTT implementation, and the current version is ALpha 0.2
